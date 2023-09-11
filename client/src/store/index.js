@@ -1,4 +1,3 @@
-import { color } from "framer-motion";
 import { proxy } from "valtio";
 
 const state = proxy({

@@ -54,17 +54,22 @@ const Customizer = () => {
     if (!prompt) return alert("Please enter a prompt");
 
     try {
-      setGeneratingImg(true);
+      //call our backend to generate an AI image!
 
-      const response = await fetch("http://localhost:8080/api/v1/dalle", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          prompt,
-        }),
-      });
+      setGeneratingImg(true);
+      
+      const response = await fetch(
+        "http://localhost:8080/api.openai.com/v1/dalle",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            prompt,
+          }),
+        }
+      );
 
       const data = await response.json();
 
@@ -167,7 +172,7 @@ const Customizer = () => {
                 isFilterTab
                 isActiveTab={() => {
                   activeFilterTab[tab.name];
-                }} //
+                }}
                 handleClick={() => handleActiveFilterTab(tab.name)}
               />
             ))}

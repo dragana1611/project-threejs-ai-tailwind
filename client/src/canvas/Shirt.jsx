@@ -1,4 +1,3 @@
-import React from "react";
 import { easing } from "maath";
 import { useSnapshot } from "valtio";
 import { useFrame } from "@react-three/fiber";
@@ -51,7 +50,12 @@ const Shirt = () => {
         )}
       </mesh>
     </group>
-  )
+  );
 };
 
 export default Shirt;
+
+/**
+ * Mesh. A mesh is an object that takes a geometry, and applies a material to it, which we then can insert to our scene, and move freely around.
+ *glTF (GL Transmission Format) is an open format specification for efficient delivery and loading of 3D content. A glTF asset may deliver one or more scenes, including meshes, materials, textures, skins, skeletons, morph targets, animations, lights, and/or cameras. *
+ */
