@@ -59,7 +59,7 @@ const Customizer = () => {
       setGeneratingImg(true);
       
       const response = await fetch(
-        "http://localhost:8080/api/v1/dalle",
+        "https://project-threejs-ai-tailwind.onrender.com/api/v1/dalle",
         {
           method: "POST",
           headers: {
